@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //    "use strict"
+    console.log("hello")
+    var a = "qwe"
+    var b = 100
+    //    c=0
+    var z
+    console.log(a, b)
+    console.log(typeof a, typeof b, typeof c)
+
+    var m = [100, true, "qwer", "", []]
+    //    m[1000]="asda"
+
+    console.log(m)
+
+    var obj = {
+        name: "vasya",
+        age: 10
+
+    }
+
+    obj['job'] = "okten"
+    obj.id = 1111
+    obj['edrpo'] = 1234
+
+    console.log(obj.name)
+    console.log(obj.job)
+    console.log(obj)
+
+
+    if ("qwer") {
+        console.log("good")
+    }
+    else {
+        console.log('bad')
+    }
+
+    console.log(+"1234")
+    console.log("--------")
+
+    //    var enter = prompt("some txt")
+    //    console.log(enter)
+
+    for (let obj of m) {
+        console.log(obj)
+    }
+
+    for (var o in obj) {
+        console.log(o, obj[o])
+    }
+
+    console.log("--------")
+    var max
+    var mass = new Array(10)
+    //var r=Math.floor(Math.random()*(10-1)+1)
+    //    console.log(r)
+
+    for (var i = 0; i < mass.length; i++) {
+        var r = Math.floor(Math.random() * (10 - 1 + 1) + 1)
+        mass[i] = r
+
+        console.log(mass[i])
+    }
+    max = mass[0]
+    for (let obj of mass) {
+
+        if (max < obj) {
+            max = obj
+        }
+    }
+    console.log("max=", max)
+
+    foo()
+
+    function foo() {
+        console.log("hello world")
+    }
+
+    //    bar(); err
+    var bar = function () {
+        console.log("hello bar")
+    }
+    bar();
+
+
+    console.log("********")
+
+    function testfoo(a, b) {
+        console.log("hello bar", a, b)
+//        console.log(arguments)
+    }
+
+    testfoo("aaa", "xxx")
+
+    var wrap = testfoo
+    wrap("bbbb222", "eeeeee22")
+
+    console.log("**-----**")
+
+    function calc(x, y, callback) {
+        callback(x, y)
+
+    }
+
+    calc(10, 20, function (z, v) {
+        console.log(z + v)
+    })
+    console.log("**-----**")
+
+
+    function outer() {
+        var k = 0
+
+        function inner() {
+
+            return ++k
+        }
+
+//        console.log(k)
+        return inner
+    }
+
+    console.log(outer())
+    let innerOuter = outer();
+    //    console.log(innerOuter())
+    console.log(innerOuter())
+
+
+    console.log("*********")
+
+    function printarray(mas, callback) {
+        callback(mas)
+    }
+
+    printarray([10,22,33,44], function (mas) {
+        console.log(mas)
+    } )
+
+
+
+</script>
+
+</body>
+</html>
